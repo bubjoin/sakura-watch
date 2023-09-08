@@ -52,6 +52,19 @@ class StopWatch():
         self.check_stopped = True
         self.label_stopwatch.config(text=self.time_str)
         
+        self.to_stop = 0
+
+        self.src_path = os.path.abspath(__file__)
+        self.src_dir = os.path.dirname(self.src_path)
+        self.img_path = os.path.join(self.src_dir, "sewoo_1.png")
+        self.img_sewoo_1 = tkinter.PhotoImage(file=self.img_path)
+        self.img_sewoo_1 = self.img_sewoo_1.zoom(2)
+        self.img_path = os.path.join(self.src_dir, "sewoo_2.png")
+        self.img_sewoo_2 = tkinter.PhotoImage(file=self.img_path)
+        self.img_sewoo_2 = self.img_sewoo_2.zoom(2)
+        self.label_sewoo = tkinter.Label(frame, image=self.img_sewoo_1, bg="white")
+        self.label_sewoo.place(x=264, y=11)
+        
     def click_btn_go(self):
         if self.check_stopped==True:
             self.time_stop_elapse_acc += self.time_stop_elapse
@@ -85,6 +98,10 @@ class StopWatch():
             self.time_str += f"{self.time_secs:02}"
             self.time_str += f" {self.time_0_01_secs:02}"
             self.label_stopwatch.config(text=self.time_str)
+            if int(self.time_elapse)%2==1:
+                self.label_sewoo.config(image=self.img_sewoo_1)
+            else:
+                self.label_sewoo.config(image=self.img_sewoo_2)
         else:
             if self.time_stop_start:
                 self.time_stop_elapse = time.time() - self.time_stop_start
@@ -131,7 +148,7 @@ elif what_platform=="Windows":
     
     src_path = os.path.abspath(__file__)
     src_dir = os.path.dirname(src_path)
-    img_path = os.path.join(src_dir, "sakura.png")
+    img_path = os.path.join(src_dir, "sewoo.png")
     window.iconphoto(False, tkinter.PhotoImage(file=img_path))
 else:
     btn_go = ttk.Button(frame, text="Go",
@@ -149,4 +166,6 @@ else:
 window.title('SAKURA Watch')
 window.mainloop()
 
-# pyinstaller --onefile --noconsole --icon sakura.ico --add-data="./sakura.png;." .\sakura_watch.py
+# pyinstaller --onefile --noconsole --icon sewoo.ico 
+# --add-data="./sewoo.png;." --add-data="./sewoo_1.png;." --add-data="./sewoo_2.png;." 
+# .\sakura_watch.py
