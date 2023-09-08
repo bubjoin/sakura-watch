@@ -1,6 +1,6 @@
 ## SAKURA Watch
 **Coding started with a sakura leaf, ended with a cat**  
-**I drew the cat icon after seeing my neighbor's cat named Sewoo**  
+**I drew the cat icon after seeing my neighbor's cat named Se-woo**  
 **Windows version with .ico**  
 **Planning to make a Mac version with .icns**  
 **Cross platform source using Tkinter**
