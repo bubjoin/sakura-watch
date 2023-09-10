@@ -166,6 +166,17 @@ else:
 window.title('SAKURA Watch')
 window.mainloop()
 
+# For Windows
 # pyinstaller --onefile --noconsole --icon sewoo.ico 
 # --add-data="./sewoo.png;." --add-data="./sewoo_1.png;." --add-data="./sewoo_2.png;." 
 # .\sakura_watch.py
+
+# For Mac
+# pyinstaller --onefile --noconsole
+# --add-data="./sewoo_1.png;." --add-data="./sewoo_2.png;."
+# ./sakura_watch.py
+
+# For Linux
+# pyinstaller --onefile --noconsole
+# --add-data="./sewoo_1.png;." --add-data="./sewoo_2.png;."
+# ./sakura_watch.py
