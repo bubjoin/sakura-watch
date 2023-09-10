@@ -5,4 +5,4 @@
 **Planning to make a Mac version with .icns**  
 **Cross platform source using Tkinter**
 
-![](https://github.com/bubjoin/sakura-watch/blob/0cf27389c9d5d9aad5379cd33106458e2effb098/sakura_watch_demo.gif)
+![](https://github.com/bubjoin/sakura-watch/blob/ca2dee375db72e5624d530fd471cf2848e681f05/sakura_watch_demo.gif)
